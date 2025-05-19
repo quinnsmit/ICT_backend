@@ -1,8 +1,8 @@
 // src/services/twilio.service.ts
 import { Twilio } from 'twilio/lib';
 
-const accountSid = 'your_account_sid';
-const authToken = 'your_auth_token';
+const accountSid = process.env.TWILION_SID;
+const authToken = process.env.TWILION_AUTH;
 const fromNumber = '+1234567890'; // Your Twilio number
 
 const client = new Twilio(accountSid, authToken);

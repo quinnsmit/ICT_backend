@@ -2,7 +2,7 @@
 import Router from '@koa/router';
 import { AppDataSource } from '../db/data-source';
 import { User } from '../entities/User'; // replace with your data entity
-import { sendAlertSms } from '../services/twilio.service';
+import { sendAlertSms } from '../services/sms.service';
 
 const router = new Router();
 

@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import Koa from 'koa';
 import bodyParser from 'koa-bodyparser';
 import Router from '@koa/router';
@@ -5,7 +6,6 @@ import { AppDataSource } from './db/data-source';
 import userRoutes from './routes/user.routes';
 import analyzeRoutes from './routes/analyze.routes';
 
-import 'dotenv/config';
 
 const app = new Koa();
 const router = new Router();
