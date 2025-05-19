@@ -1,0 +1,18 @@
+import Koa from 'koa';
+import bodyParser from 'koa-bodyparser';
+import Router from '@koa/router';
+import { AppDataSource } from './db/data-source';
+import userRoutes from './routes/user.routes';
+
+const app = new Koa();
+const router = new Router();
+
+router.use('/users', userRoutes.routes());
+
+app.use(bodyParser());
+app.use(router.routes()).use(router.allowedMethods());
+
+AppDataSource.initialize().then(() => {
+    console.log('Database connected');
+    app.listen(3000, () => console.log('Server running on http://localhost:3000'));
+}).catch(error => console.error('Database connection error:', error));

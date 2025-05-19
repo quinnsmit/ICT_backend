@@ -1,0 +1,24 @@
+{
+  "name": "koa-typeorm-backend",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@koa/router": "^12.0.0",
+    "koa": "^2.14.1",
+    "koa-bodyparser": "^4.3.0",
+    "mysql2": "^3.2.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.17"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.15.0",
+    "@types/koa__router": "^12.0.4",
+    "@types/koa-bodyparser": "^4.3.12",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
